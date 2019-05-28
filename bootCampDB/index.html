@@ -1,0 +1,85 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("button").click(function(){
+                let query = $(".comandos").val();
+                $.ajax({
+                    type: "POST",
+                    url: "consulta.php", 
+                    data: {sql: query}, 
+                    //dataType: "json",
+                    success: function(result){
+                        $(".board").html(result);
+                        let json = $.parseJSON(result);
+                        let string = "<table>";
+                        let head = 1;
+                        $(json).each(function(i,val){
+                            if(head){
+                                string += "<tr>";
+                                $.each(val, function(k, v){
+                                    string += "<th>" + k + "</th>";
+                                });
+                                string += "</tr>";
+                                head = 0;
+                            }
+                            string += "<tr>";
+                            $.each(val,function(k,v){
+                                //console.log(k+" : "+ v); 
+                                //string += "<th>"+ k +"</th>";      
+                                string += "<td>" + v + "</td>";
+                            });
+                            string += "</tr>";
+                        });
+                       string += "</table>";
+                        $(".board").html(string);
+                    }
+                                        
+                });
+            });
+        });
+    
+    </script>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+        tr, td, th{
+            border: solid 1px black;
+        }
+        .board{
+            background-color: beige;
+            height: 200px;
+            width: 80%;
+            margin: 0 auto;
+            overflow-y: auto;/*barra de rolagem*/
+        }
+        .divcomandos{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .comandos{
+            width: 100%;
+        }
+        .botao{
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="board"></div>
+    <div class="divcomandos">
+        <textarea class="comandos">select * from empregado</textarea>
+        <button class="botao">Enviar</button>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+/*Chat*/
+
+#divChamadas{
+	border: solid black 2px;
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
+	width: 600px;
+	height: 700px;
+}
+#exibirChamada{
+	background-color: white;
+	margin: 0px;
+	width: 600px;
+	height: 600px;
+	overflow-x: auto;
+	font-size: 20px;
+}
+#querySql{
+	background-color: white;
+	margin: 0px;
+	width: 600px;
+	height: 100px;
+}
+#campoQuery{
+	margin: 0px;
+	width: 494px;
+	height: 94px;
+	font-size: 30px;
+}
+#enviarQuery{
+	padding: 0px;
+	margin: 0px;
+	width: 94px;
+	height: 94px;
+	font-size: 30px;
+}

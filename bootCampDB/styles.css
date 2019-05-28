@@ -1,0 +1,71 @@
+/*Chat*/
+
+#chatDiv{
+	border: solid black 2px;
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
+	width: 600px;
+	height: 700px;
+}
+#chat{
+	background-color: white;
+	margin: 0px;
+	width: 600px;
+	height: 600px;
+	overflow-x: auto;
+	font-size: 20px;
+}
+#mensagens{
+	background-color: white;
+	margin: 0px;
+	width: 600px;
+	height: 100px;
+}
+#campoMensagem{
+	margin: 0px;
+	width: 494px;
+	height: 94px;
+	font-size: 30px;
+}
+#enviarMensagem{
+	padding: 0px;
+	margin: 0px;
+	width: 94px;
+	height: 94px;
+	font-size: 30px;
+}
+
+/*Login*/
+
+#loginDiv{
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
+	width: 500px;
+	height: 300px;
+}
+#usuarioLogin{
+	margin-right: 100px;
+	margin-left: 100px;
+	text-align: center;
+}
+#loginLabel{
+	font-size: 20px;
+	color: white;
+}
+#campoLogin{
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#btnLogin{
+	margin-top: 100px;
+	width: 100px;
+	height: 100px;
+	font-size: 20px;
+	margin-right: 200px;
+	margin-left: 200px;
+}

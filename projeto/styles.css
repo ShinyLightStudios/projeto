@@ -1,0 +1,85 @@
+/*Chat*/
+html{
+	background-color: grey;
+}
+
+div{
+	background-color: grey;
+}
+
+#chatDiv{
+	margin-top: 2%;
+	margin-left: 55%;
+	margin-right: auto;
+	width: 40%;
+	height: 700px;
+}
+#chat{
+	background-color: white;
+	border: solid white 1px;
+	margin: 0px;
+	width: 100%;
+	height: 90%;
+	overflow-x: auto;
+	font-size: 20px;
+}
+#mensagens{
+	width: 100%;
+	height: 10%;
+}
+.comandos{
+	border: solid white 1px;
+	border-top:solid black 1px;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	resize: none;
+	font-size: 150%;
+}
+.btnBotao{
+	margin: 0;
+	margin-top: 1%;
+	margin-left: 89%;
+	padding: 2%;
+	border-radius: 50%;
+	background-color: red;
+	border:none;
+	color: White;
+	font-weight: 700;
+}
+.btnBotao:onhover{
+	background-color: rgb(109, 111, 110);
+}
+.btnBotao:onclick{
+	background-color: red;
+	border: solid black 1%;
+}
+
+.speech-bubble {
+	position: relative;
+	margin-left: 35%;
+	margin-top: 9%;
+	float: left;
+	width: 15%;
+	padding: 2%;
+	background: #0b0b0b;
+	border-radius: .4em;
+	color: #45ff0f;
+	font-weight: 600;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #0b0b0b;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
