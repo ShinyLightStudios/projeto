@@ -48,11 +48,22 @@ CREATE TABLE IF NOT EXISTS aventureiro(
  foreign key aventureiro(nome_cidade) REFERENCES cidade(nome_cidade)
 );
 
+CREATE TABLE IF NOT EXISTS COMIDAS(
+	nome varchar(255),
+    preco int,
+    validade int
+);
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+
+INSERT into COMIDAS (nome, preco, validade) values ("Carne de Vaca", 20, 3);
+INSERT into COMIDAS (nome, preco, validade) values ("Carne de Porco", 15, 2);
+INSERT into COMIDAS (nome, preco, validade) values ("Repolho", 5, 6);
+INSERT into COMIDAS (nome, preco, validade) values ("Cenoura", 6, 7);
 INSERT INTO cidade (nome_cidade,guilda, guildmaster, quantidade_Habitantes) VALUES ("SQL City", "SQL Guild", "SQL Master", 21659);
 INSERT INTO cidade (nome_cidade,guilda, guildmaster, quantidade_Habitantes) VALUES ("Canerut","Canerut Guild","Canerut Master",8896);
 INSERT INTO cidade (nome_cidade,guilda, guildmaster, quantidade_Habitantes) VALUES ("Ganglegoft","Ganglegoft Guild","Ganglegoft Master",12564);
